@@ -46,24 +46,6 @@ To handle high-throughput read/write operations, the database schema implements 
 
 ---
 
-## 🚦 API Endpoints Map
-
-### 👤 Authentication
-*   `POST /api/v1/auth/register` - Create user profile + trigger welcome email
-*   `POST /api/v1/auth/login` - Authenticate user & issue HTTP-only cookie session
-*   `POST /api/v1/auth/logout` - Blacklist current session token
-
-### 🏦 Account Management
-*   `POST /api/v1/accounts` - Provision a new bank account
-*   `GET /api/v1/accounts/:id/balance` - Compute balance via aggregation pipeline
-*   `PATCH /api/v1/accounts/:id/status` - Freeze/Close account (Admin restricted)
-
-### 💸 Financial Transactions
-*   `POST /api/v1/transactions/transfer` - Execute ledger-based debit/credit transfer
-*   `GET /api/v1/transactions/history` - Fetch scannable, paginated audit statements
-
----
-
 ## ⚙️ Environment Variables Template
 
 Create a `.env` file in your root folder and populate it with your local configurations:
